@@ -4,7 +4,7 @@ function OnEvent(event, arg)
 		MoveMouseTo(60951, 8198)
 		Sleep(10)
 		PressAndReleaseMouseButton(1)
-		Sleep(20)
+		Sleep(30)
 		MoveMouseTo(58748, 11750)
 	end
 
