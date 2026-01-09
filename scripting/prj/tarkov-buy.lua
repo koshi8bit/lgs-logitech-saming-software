@@ -22,4 +22,20 @@ function OnEvent(event, arg)
 		x, y = GetMousePosition();
 		OutputLogMessage("Mouse is at %d, %d\n", x, y);
 	end
+
+    if event == "MOUSE_BUTTON_PRESSED" and arg == 5 then
+        flag = not flag
+        if flag then
+            repeat
+            -----------------------
+            -- your actions here 
+            OutputLogMessage("repeat\n")
+            Sleep(1000)
+            -----------------------
+            Sleep(15)
+            local prev_flag = flag
+            flag = IsMouseButtonPressed(5)
+            until not prev_flag and flag
+        end
+    end	
 end

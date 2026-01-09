@@ -1,6 +1,14 @@
 # Examples
 
-Запуск скрипта из файлв
+Кнопки мыши
+![Кнопки мыши](btn.JPG)
+
+Как активировать макрос (зеленое возможно не надо выполнять, надо проверить)
+![Как активировать макрос](how-to-enable-lua.JPG)
+
+---
+
+Запуск скрипта из файлов
 ```lua
 data = dofile[[F:\home\koshi8bit\soft\windows\01-main\logitech\scripting\prj\tarkov-buy.lua]]
 ```
@@ -46,10 +54,10 @@ end
 local flag
 
 function OnEvent(event, arg)
-   if event == "MOUSE_BUTTON_PRESSED" and arg == 5 then
-      flag = not flag
-      if flag then
-         repeat
+    if event == "MOUSE_BUTTON_PRESSED" and arg == 5 then
+        flag = not flag
+        if flag then
+            repeat
             -----------------------
             -- your actions here 
             OutputLogMessage("repeat\n")
@@ -58,9 +66,9 @@ function OnEvent(event, arg)
             Sleep(15)
             local prev_flag = flag
             flag = IsMouseButtonPressed(5)
-         until not prev_flag and flag
-      end
-   end
+            until not prev_flag and flag
+        end
+    end
 end
 
 ```
