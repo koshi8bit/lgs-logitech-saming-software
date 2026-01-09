@@ -3,14 +3,17 @@
 Кнопки мыши
 ![Кнопки мыши](btn.JPG)
 
-Как активировать макрос (зеленое возможно не надо выполнять, надо проверить)
-![Как активировать макрос](how-to-enable-lua.JPG)
+Как активировать макрос (возможно если игра запущена из-под админа - надо логитек запускать из под админа тоже)
+![Как активировать макрос 1](how-to-enable-lua-1.png)
+
+Разница между галочками в профилях ниже. Профили и скрипты в них переключаются автоматически при смене активного `*.exe`
+![Как активировать макрос 2](how-to-enable-lua-2.png)
 
 ---
 
 Запуск скрипта из файлов
 ```lua
-data = dofile[[F:\home\koshi8bit\soft\windows\01-main\logitech\scripting\prj\tarkov-buy.lua]]
+data = dofile[[F:\home\koshi8bit\soft\windows\01-main\logitech\scripting\prj\default.lua]]
 ```
 ---
 Простая покупка в таркове
@@ -73,5 +76,5 @@ end
 
 ```
 ---
-Прост пример из гитхаба
-[LGS_script_template.lua](examples/LGS_script_template.lua)
+Прост примеры из гитхаба
+- [examples/LGS_script_template.lua](examples/LGS_script_template.lua)
