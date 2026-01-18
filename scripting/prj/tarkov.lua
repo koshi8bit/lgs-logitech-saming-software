@@ -1,9 +1,7 @@
 --data = dofile[[F:\home\koshi8bit\soft\windows\01-main\logitech\scripting\prj\tarkov.lua]]
 
 function OnEvent(event, arg)
-	OutputLogMessage("event = %s, arg = %s\n", event, arg);
-	-- a=true
-	-- OutputLogMessage("a = %t\n", a);
+	OutputLogMessage("event = %s, arg = %s\n", event, arg)
 
 	-- if event == "MOUSE_BUTTON_PRESSED" and arg == 2 and IsModifierPressed("ctrl") then
 	-- 	PressAndReleaseMouseButton(3)
@@ -14,12 +12,14 @@ function OnEvent(event, arg)
     -- end
 
     if event == "MOUSE_BUTTON_PRESSED" and arg == 6 then
+		x, y = GetMousePosition()
 		PressAndReleaseMouseButton(1)
 		Sleep(50)
 		MoveMouseTo(40233, 29648)
 		PressAndReleaseMouseButton(1)
 		Sleep(5)
 		PressAndReleaseKey("y")
+		MoveMouseTo(x, y)
     end
 
     if event == "MOUSE_BUTTON_PRESSED" and arg == 4 then
